@@ -34,7 +34,7 @@ function About() {
                     <hr/>
                     <h5>Good Luck!</h5>
                      </p><Link
-              to={`${match.url}/play`}
+              to={process.env.PUBLIC_URL + '/play'}
               className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
             >
               Play Game

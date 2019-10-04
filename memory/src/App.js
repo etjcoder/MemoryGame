@@ -10,8 +10,8 @@ function App() {
     <Router>
       <div>
         <NavBar />
-          <Route exact path="/" component={About} />
-          <Route exact path="/play" component={GameContainer} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={About} />
+          <Route exact path={process.env.PUBLIC_URL + '/play'} component={GameContainer} />
       </div>
     </Router>
   );
