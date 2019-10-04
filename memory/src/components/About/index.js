@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Wrapper from "../Wrapper/Wrapper"
+import Wrapper from "../Wrapper/Wrapper";
+import { Link } from "react-router-dom"
 import Jumbotron from "../Jumbotron"
 import "./style.css"
 
@@ -32,8 +33,12 @@ function About() {
                     </ul>
                     <hr/>
                     <h5>Good Luck!</h5>
-                    <a href="/play" className="btn btn-outline-primary">Play Game</a>
-                </p>
+                     </p><Link
+              to={`${match.url}/play`}
+              className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
+            >
+              Play Game
+            </Link>
             </div>
         </div>
         </Wrapper>

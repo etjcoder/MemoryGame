@@ -13,7 +13,7 @@ function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/"
+              to= {`${match.url}/`}
               className={
                 window.location.pathname === "/" || window.location.pathname === "/about"
                   ? "nav-link active"
@@ -25,7 +25,7 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/play"
+              to={`${match.url}/play`}
               className={window.location.pathname === "/discover" ? "nav-link active" : "nav-link"}
             >
               Play Game
